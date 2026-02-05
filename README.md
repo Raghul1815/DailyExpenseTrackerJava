@@ -1,76 +1,44 @@
-Daily Expense Tracker (Core Java)
-About the Project
+# Daily Expense Tracker (Core Java)
 
-The Daily Expense Tracker is a console-based Core Java application designed to help users record and manage their day-to-day expenses in a structured manner.
+## About the Project
+* **Overview:** A console-based Core Java application designed to record and manage day-to-day expenses in a structured format.
+* **Objective:** To apply Core Java fundamentals and Object-Oriented Programming (OOPS) principles to solve a real-life financial tracking problem.
 
-The project focuses on applying Core Java fundamentals and Object-Oriented Programming (OOPS) concepts to solve a real-life problem.
+## Why I Chose This Project
+* **Problem Statement:** I found it difficult to track where my money was being spent without a systematic record.
+* **Solution:** Built this tool to capture specific details like Date, Product, and Amount to gain better financial clarity.
+* **Skill Development:** This project served as a bridge between theoretical Java concepts and practical implementation.
 
-Why I Chose This Project
+## Project Architecture & Flow
+* **User Interface:** A menu-driven console interface offering:
+    * **Add Expense:** Inputting new transaction data.
+    * **View Expenses:** Displaying history in a clean format.
+    * **Exit:** Safely closing the application.
+* **Data Validation:**
+    * **Date:** Validated using Regex and logical checks to ensure correct formatting.
+    * **Amount:** Validated to ensure only positive numerical values are accepted.
+* **Storage & Output:**
+    * Details are displayed in the console using a tabular format.
+    * Expenses are persistently stored in a text file using a structured layout.
+    * **Session Management:** On exit, the file is closed with a separator line to mark the end of the session.
 
-I realized that I often made mistakes while managing and tracking my daily expenses.
+## Concepts & Components Used
 
-Without proper tracking, it became difficult to understand where my money was being spent.
+### Core Java Fundamentals
+* **Classes & Objects:** Used for structuring the expense entity and management logic.
+* **Constructors:** To initialize expense objects with specific data.
+* **Scanner:** For capturing dynamic user input from the console.
+* **File Handling:** Utilized `FileWriter` and `BufferedWriter` for data persistence.
+* **Exception Handling:** Managed potential runtime errors during input and file operations.
 
-To overcome this issue, I decided to build a Daily Expense Tracker that records expense details such as date, product, and amount.
+### Object-Oriented Programming (OOPS)
+* **Abstraction:** Implemented via the `ExpenseOperations` interface.
+* **Inheritance:** The `ExpenseManager` class implements the interface.
+* **Polymorphism:** Used interface references to hold implementing class objects.
+* **Encapsulation:** Secured data using private variables and getter methods.
 
-This project also helped me practically apply Core Java concepts instead of learning them only theoretically.
-
-Project Architecture & Flow
-Application Flow
-
-The user selects an option from the menu:
-
-Add Expense
-
-View Expenses
-
-Exit
-
-While adding an expense:
-
-The date is validated using Regex and logical checks.
-
-The amount is validated to ensure it is a positive number.
-
-Expense details are:
-
-Displayed in a tabular format in the console.
-
-Stored in a text file in tabular format.
-
-On exit:
-
-The file is properly closed with a closing separator line to mark the end of the session.
-
-Concepts & Components Used
-Core Java Concepts
-
-Classes and Objects
-
-Constructors
-
-Scanner for user input
-
-File Handling (FileWriter, BufferedWriter)
-
-Exception Handling
-
-OOPS Concepts (All Four Pillars)
-
-Abstraction – Interface ExpenseOperations
-
-Inheritance – ExpenseManager implements the interface
-
-Polymorphism – Interface reference holding the implementing class object
-
-Encapsulation – Private variables accessed through getter methods
-
-Additional Concepts
-
-Custom Exception Handling
-
-Regular Expression (Regex) validation
-
-Formatted output using printf()
-
-Collection Framework (ArrayList)
+### Additional Concepts
+* **Collections Framework:** Used `ArrayList` to manage expense records dynamically.
+* **Custom Exception Handling:** Created specific exceptions for invalid user inputs.
+* **Regex:** Implemented pattern matching for strict date validation.
+* **Formatted Output:** Utilized `printf()` for table alignment in the console.
